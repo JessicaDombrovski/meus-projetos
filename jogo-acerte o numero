@@ -1,0 +1,25 @@
+var numeroSecreto = parseInt(Math.random() * 1001)
+var tentativas = 0;
+
+while (tentativas < 10) {
+  var chute = prompt("Digite um número entre 0 e 1000");
+  if (chute === null) {
+    alert("iihhhhhh desistiu, você é fraca lhe falta odio");
+    break;
+  }
+chute = parseInt(chute);
+  //se o chute for igual ao numero secreto 
+        if (chute == numeroSecreto) {
+        alert('AAAAEEEEEEE Acertou!!!!!! ô gloria 𓀠');
+        break;
+       }else if (chute > numeroSecreto) {
+        alert('ERRO troxa 𓀄𓀓 , o numero secreto é MENOR')
+       }else if (chute < numeroSecreto) {
+        alert('ERRO troxa 𓀄𓀓 , o numero secreto é MAIOR')
+      } 
+  tentativas++;
+    }
+ 
+    if (tentativas === 10) {
+  alert("Você perdeu! O número secreto era " + numeroSecreto);
+}
